@@ -34,7 +34,7 @@
 
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
-
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-app.js"></script>
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>
 
@@ -44,6 +44,24 @@
 
   <!-- The main bundle js is generated during the build process -->
   <script src="build/main.js"></script>
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var firebaseconfig = {
+      apiKey: "AIzaSyBoEcjb2dgZLCT50RhGYxDaCeMxDKqk998",
+      authDomain: "shopping-5fe5c.firebaseapp.com",
+      databaseURL: "https://shopping-5fe5c.firebaseio.com",
+      projectId: "shopping-5fe5c",
+      storageBucket: "",
+      messagingSenderId: "144378721051"
+    };
+    firebase.initializeApp(firebaseconfig);
+  </script>
+  
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js">
+  </script>
 
 </body>
 </html>

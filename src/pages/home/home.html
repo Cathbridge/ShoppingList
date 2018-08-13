@@ -1,14 +1,36 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
+
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>Home</ion-title>
   </ion-navbar>
+
 </ion-header>
 
+
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+
+  <ion-item>
+    <ion-label floating color="danger">Add shopping item</ion-label>
+    <ion-input [(ngModel)]="name" ></ion-input>
+  </ion-item>
+  <button ion-button block (click)="onAdd()">Add</button>
+  <br>
+  <ion-list>
+    <ion-item-sliding  *ngFor="let i of items" #item>
+    <ion-item >
+        <p>{{i?.name}}</p>
+    </ion-item >
+    <ion-item-options side="right">
+        <button ion-button  (click)="onUpdate(i?.key)" style=" margin-right: 5px;">Update</button> 
+        <button ion-button color="danger" (click)="onDelete(i?.key)">Delete</button>
+      </ion-item-options>
+  </ion-item-sliding>
+  </ion-list>
+
 </ion-content>
